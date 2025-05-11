@@ -8,6 +8,6 @@ public class Bandit : MonoBehaviour
     public Animation anim;
     
     public void Die() {
-        
+        Debug.Log("bandit dead");
     }
 }

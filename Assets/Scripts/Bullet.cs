@@ -16,10 +16,10 @@ public class Bullet : MonoBehaviour {
         Barrel barrel = hitInfo.GetComponent<Barrel>();
         Bandit bandit = hitInfo.GetComponent<Bandit>();
 
-        if (hitInfo.GetComponent<Barrel>() == barrel) {
+        if (hitInfo.GetComponent<Barrel>() != null) {
             barrel.Explode();
         }
-        else if (hitInfo.GetComponent<Bandit>() == bandit) {
+        else if (hitInfo.GetComponent<Bandit>() != null) {
             bandit.Die();
         }
         
