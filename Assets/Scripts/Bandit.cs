@@ -5,9 +5,11 @@ using UnityEngine;
 public class Bandit : MonoBehaviour
 {
     public Animator animator;
-    public Animation anim;
     
     public void Die() {
-        Debug.Log("bandit dead");
+        int randKick = Random.Range(1, 3);
+        
+        animator.SetInteger("deathID", randKick);
+        animator.SetBool("isDead", true);
     }
 }
