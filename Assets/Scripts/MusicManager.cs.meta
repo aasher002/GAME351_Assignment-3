@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 97e0b072cc0c57049b3aa40fba079fff
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - defaultTrack: {fileID: 8300000, guid: fccfa779691183446a548527e0ec3ec1, type: 3}
+  - suspenseTrack: {fileID: 8300000, guid: 33741693fcc0dd24284c2d770be2f841, type: 3}
+  - fightTrack: {fileID: 8300000, guid: 30189ce05c389e04f9b023dfbb66b910, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
