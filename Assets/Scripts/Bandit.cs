@@ -51,9 +51,9 @@ public class Bandit : MonoBehaviour
     public void Die() {
         isDead = true;
         
-        int randKick = Random.Range(1, 3);
+        int randDeath = Random.Range(1, 3);
         
-        animator.SetInteger("deathID", randKick);
+        animator.SetInteger("deathID", randDeath);
         animator.SetBool("isDead", true);
     }
 }
