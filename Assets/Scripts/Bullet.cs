@@ -15,12 +15,16 @@ public class Bullet : MonoBehaviour {
     private void OnTriggerEnter(Collider hitInfo) {
         Barrel barrel = hitInfo.GetComponent<Barrel>();
         Bandit bandit = hitInfo.GetComponent<Bandit>();
+        Player player = hitInfo.GetComponent<Player>();
 
         if (hitInfo.GetComponent<Barrel>() != null) {
             barrel.Explode();
         }
         else if (hitInfo.GetComponent<Bandit>() != null) {
             bandit.Die();
+        }
+        else if (hitInfo.GetComponent<Player>() != null) {
+            player.TakeDamage();
         }
         
         Destroy(gameObject);
