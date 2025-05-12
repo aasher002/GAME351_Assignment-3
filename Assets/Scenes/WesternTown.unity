@@ -25535,8 +25535,8 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 592939022}
   target: {fileID: 803449927}
-  min_angle: 0
-  max_angle: 0
+  min_angle: -7
+  max_angle: 7
 --- !u!136 &908960316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28431,8 +28431,8 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 578319529}
   target: {fileID: 803449927}
-  min_angle: 0
-  max_angle: 0
+  min_angle: -7
+  max_angle: 7
 --- !u!136 &995164642
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -47985,8 +47985,8 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 1415296571}
   target: {fileID: 803449927}
-  min_angle: 0
-  max_angle: 0
+  min_angle: -7
+  max_angle: 7
 --- !u!136 &1634644881
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -61828,8 +61828,8 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 979086743}
   target: {fileID: 803449927}
-  min_angle: 0
-  max_angle: 0
+  min_angle: -7
+  max_angle: 7
 --- !u!136 &2033694764
 CapsuleCollider:
   m_ObjectHideFlags: 0

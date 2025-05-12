@@ -44,7 +44,13 @@ public class Bandit : MonoBehaviour
     }
     
     void Shoot() {
-        Instantiate(bulletPrefab, firePoint.position,firePoint.rotation);
+        var angleX = Random.Range(min_angle, max_angle);
+        var angleY = Random.Range(min_angle, max_angle);
+        var angleZ = Random.Range(min_angle, max_angle);
+        
+        var bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.transform.Rotate(angleX, angleY, angleZ);
+        
         fireRate = Random.Range(30f, 61f);
     }
     
