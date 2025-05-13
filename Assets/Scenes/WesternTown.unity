@@ -25805,6 +25805,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 24b80a91403a41e4dbdcb9679c9f0fe4, type: 3}
   - {fileID: 8300000, guid: 5db64459cd7b31340ada3c2e8ca96f6c, type: 3}
   deathClip: {fileID: 8300000, guid: c9103ad186b025f4b8f2942cc93acb89, type: 3}
+  tauntClips:
+  - {fileID: 8300000, guid: 2913ff5d8560b474792ed640f4e75c7e, type: 3}
+  - {fileID: 8300000, guid: ddce4dc69d48a21439ee6c3290f23be4, type: 3}
+  - {fileID: 8300000, guid: 7f50ee23bf4bfc544a0ba43da484d694, type: 3}
 --- !u!136 &908960316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28714,6 +28718,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5db64459cd7b31340ada3c2e8ca96f6c, type: 3}
   - {fileID: 8300000, guid: f93e7534d6af39c44a39a829b12e953c, type: 3}
   deathClip: {fileID: 8300000, guid: d3f0364ce8ec69644a8786bc8a5ee202, type: 3}
+  tauntClips:
+  - {fileID: 8300000, guid: 2356d12dd1e76a743b9559ae2727feab, type: 3}
+  - {fileID: 8300000, guid: 83dbfa26035a8f2479c7df3a45f80d58, type: 3}
+  - {fileID: 8300000, guid: d968e20290ea27a44a04aaa42f285cef, type: 3}
 --- !u!136 &995164642
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -43282,6 +43290,7 @@ GameObject:
   - component: {fileID: 1457821298}
   - component: {fileID: 1457821297}
   - component: {fileID: 1457821300}
+  - component: {fileID: 1457821301}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -43496,6 +43505,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1457821301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457821292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a99662cf210524ab3474ef63563ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicManager: {fileID: 410351349}
+  supplyStore: {fileID: 1101946798}
+  enterDistance: 10
+  exitDistance: 12
 --- !u!1001 &1458404809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45098,6 +45123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1525358201}
+  - component: {fileID: 1525358202}
   m_Layer: 0
   m_Name: Bandits
   m_TagString: Untagged
@@ -45124,6 +45150,27 @@ Transform:
   m_Father: {fileID: 1896341683}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1525358202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525358200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402f2f32d6460436eba81a572e52d8db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  target: {fileID: 0}
+  min_angle: 0
+  max_angle: 0
+  painClips: []
+  deathClip: {fileID: 0}
+  tauntClips: []
 --- !u!1 &1525526649
 GameObject:
   m_ObjectHideFlags: 0
@@ -48431,6 +48478,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2579c93f84cd20648affdc9957b726ea, type: 3}
   - {fileID: 8300000, guid: d353562b4d32c6142856d66d218dd543, type: 3}
   deathClip: {fileID: 8300000, guid: 4052be6dfe9a1c141ab36a215eabd166, type: 3}
+  tauntClips:
+  - {fileID: 8300000, guid: 09432d94b8e468c4f840ffda693e15fa, type: 3}
+  - {fileID: 8300000, guid: 003285644acf42d46af306acb58415c0, type: 3}
+  - {fileID: 8300000, guid: 51a80664c5e875746870cbac1a50769b, type: 3}
 --- !u!136 &1634644881
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -62511,6 +62562,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d353562b4d32c6142856d66d218dd543, type: 3}
   - {fileID: 8300000, guid: 2579c93f84cd20648affdc9957b726ea, type: 3}
   deathClip: {fileID: 8300000, guid: ee50e1322ac406d4fb79c8f3edde2d19, type: 3}
+  tauntClips:
+  - {fileID: 8300000, guid: 2e622795bf61bcc4aa43affeae131ace, type: 3}
+  - {fileID: 8300000, guid: 7ffba12c58ec01d44b9806ffe64d22ff, type: 3}
+  - {fileID: 8300000, guid: 624ad09fcb304a14496f5d6a24225b1b, type: 3}
 --- !u!136 &2033694764
 CapsuleCollider:
   m_ObjectHideFlags: 0

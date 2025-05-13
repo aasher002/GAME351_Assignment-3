@@ -18,12 +18,17 @@ public class Bandit : MonoBehaviour
     [Header("Sound Effects")]
     public AudioClip[] painClips;
     public AudioClip deathClip;
+    public AudioClip[] tauntClips; 
 
     private AudioSource audioSource;
     private float fireRate;
     private float time;
 
     private bool isDead;
+
+    private float tauntTimer; 
+    private float tauntIntervalMin = 10f; // Min time between taunts (in seconds)
+    private float tauntIntervalMax = 30f; // Max time between taunts (in seconds)
 
     private void Start() {
         fireRate = Random.Range(30f, 61f);
@@ -37,6 +42,8 @@ public class Bandit : MonoBehaviour
         audioSource.minDistance = 5f;
         audioSource.maxDistance = 25f;
         audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+
+        tauntTimer = Random.Range(tauntIntervalMin, tauntIntervalMax);
     }
 
     void Update() {
@@ -48,6 +55,13 @@ public class Bandit : MonoBehaviour
             if (time >= fireRate) {
                 Shoot();
                 time = 0;
+            }
+
+            tauntTimer -= Time.deltaTime;
+            if (tauntTimer <= 0)
+            {
+                Taunt();
+                tauntTimer = Random.Range(tauntIntervalMin, tauntIntervalMax); 
             }
         }
     }
@@ -73,6 +87,15 @@ public class Bandit : MonoBehaviour
         if (painClips.Length > 0) {
             AudioClip clip = painClips[Random.Range(0, painClips.Length)];
             audioSource.PlayOneShot(clip);
+        }
+    }
+
+    void Taunt()
+    {
+        if (tauntClips.Length > 0)
+        {
+            AudioClip tauntClip = tauntClips[Random.Range(0, tauntClips.Length)];
+            audioSource.PlayOneShot(tauntClip);
         }
     }
     
