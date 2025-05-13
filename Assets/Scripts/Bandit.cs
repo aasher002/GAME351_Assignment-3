@@ -15,6 +15,11 @@ public class Bandit : MonoBehaviour
     public float min_angle;
     public float max_angle;
 
+    [Header("Sound Effects")]
+    public AudioClip[] painClips;
+    public AudioClip deathClip;
+
+    private AudioSource audioSource;
     private float fireRate;
     private float time;
 
@@ -22,6 +27,16 @@ public class Bandit : MonoBehaviour
 
     private void Start() {
         fireRate = Random.Range(30f, 61f);
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+        // Make it 3D positional
+        audioSource.spatialBlend = 1f;
+        audioSource.minDistance = 5f;
+        audioSource.maxDistance = 25f;
+        audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
     }
 
     void Update() {
@@ -53,6 +68,13 @@ public class Bandit : MonoBehaviour
         
         fireRate = Random.Range(30f, 61f);
     }
+
+    void PlayPainSound() {
+        if (painClips.Length > 0) {
+            AudioClip clip = painClips[Random.Range(0, painClips.Length)];
+            audioSource.PlayOneShot(clip);
+        }
+    }
     
     public void Die() {
         isDead = true;
@@ -61,5 +83,7 @@ public class Bandit : MonoBehaviour
         
         animator.SetInteger("deathID", randDeath);
         animator.SetBool("isDead", true);
+
+        PlayPainSound();
     }
 }

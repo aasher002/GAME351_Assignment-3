@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float impulseForce  = 170000.0f;
     public float impulseTorque = 3000.0f;
 
+    public AudioSource footstepSource;
+
     public GameObject hero;
 
     Animator animController;
@@ -19,6 +21,9 @@ public class PlayerController : MonoBehaviour
         // character and player's corresponding rigid body
         animController = hero.GetComponent<Animator> ();
         rigidBody      = GetComponent<Rigidbody>();
+
+        if (footstepSource == null)
+            footstepSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,10 +41,16 @@ public class PlayerController : MonoBehaviour
             rigidBody.AddRelativeForce(new Vector3(0, 0, input.z * impulseForce * Time.deltaTime));
 
             animController.SetBool("Walk", true);
+
+            if (!footstepSource.isPlaying)
+                footstepSource.Play();
         }
         else
         {
             animController.SetBool("Walk", false);
+
+            if (footstepSource.isPlaying)
+                footstepSource.Pause();
 
             // crouching with 'C' key (only when not moving)
             if (Input.GetKey(KeyCode.C))

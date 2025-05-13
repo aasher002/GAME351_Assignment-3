@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class MusicManager : MonoBehaviour
 {
     public AudioClip defaultTrack;
@@ -10,12 +9,9 @@ public class MusicManager : MonoBehaviour
     public AudioClip fightTrack;
 
     private AudioSource audioSource;
-    private string currentTrack = "Default";
+    private string currentTrack = "None";
     private float lastSwitchTime = 0f;
-    public float switchCooldown = 2f; // prevents spam switching
-    
-
-    public GameObject player; // Reference to the player
+    public float switchCooldown = 2f;
 
     void Start()
     {
@@ -23,7 +19,7 @@ public class MusicManager : MonoBehaviour
         PlayTrack("Default");
     }
 
-    void PlayTrack(string trackName)
+    private void PlayTrack(string trackName)
     {
         if (Time.time - lastSwitchTime < switchCooldown) return;
         if (trackName == currentTrack) return;
@@ -48,41 +44,9 @@ public class MusicManager : MonoBehaviour
         audioSource.Play();
     }
 
-    public void PlayDefault()
-    {
-        PlayTrack("Default");
-    }
+    public void PlayDefault() => PlayTrack("Default");
+    public void PlaySuspense() => PlayTrack("Suspense");
+    public void PlayFight() => PlayTrack("Fight");
 
-    public void PlaySuspense()
-    {
-        PlayTrack("Suspense");
-    }
-
-    public void PlayFight()
-    {
-        PlayTrack("Fight");
-    }
-
-    public string GetCurrentTrack()
-    {
-        return currentTrack;
-    }
-
-    // Detect the player entering the proximity of the Supply Store
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PlaySuspense();
-        }
-    }
-
-    // Detect the player exiting the proximity of the Supply Store
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player")) 
-        {
-            PlayDefault();
-        }
-    }
+    public string GetCurrentTrack() => currentTrack;
 }
