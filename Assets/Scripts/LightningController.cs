@@ -10,6 +10,11 @@ public class LightningController : MonoBehaviour
     public Transform startPoint;
     public Transform endPoint;
 
+    [Header("Thunder Sound")]
+    public AudioClip[] thunderClips;
+
+    private AudioSource audioSource;
+
     public float minDelay = 5f;
     public float maxDelay = 15f;
     public float strikeRange = 20f;
@@ -30,6 +35,14 @@ public class LightningController : MonoBehaviour
         originalEndPos = endPoint.position;
 
         RenderSettings.ambientLight = normalAmbientColor;
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.spatialBlend = 1f; 
+        audioSource.minDistance = 5f;
+        audioSource.maxDistance = 50f;
     }
 
     void Update()
@@ -77,6 +90,13 @@ public class LightningController : MonoBehaviour
             point.x += Random.Range(-0.5f, 0.5f);
             point.z += Random.Range(-0.5f, 0.5f);
             lr.SetPosition(i, point);
+        }
+
+        yield return new WaitForSeconds(Random.Range(0.3f, 1.2f));
+        if (thunderClips.Length > 0)
+        {
+            AudioClip randomClip = thunderClips[Random.Range(0, thunderClips.Length)];
+            audioSource.PlayOneShot(randomClip);
         }
 
         yield return new WaitForSeconds(0.1f);

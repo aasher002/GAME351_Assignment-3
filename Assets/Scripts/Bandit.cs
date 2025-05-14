@@ -95,6 +95,11 @@ public class Bandit : MonoBehaviour
         if (tauntClips.Length > 0)
         {
             AudioClip tauntClip = tauntClips[Random.Range(0, tauntClips.Length)];
+
+            float distance = Vector3.Distance(transform.position, target.transform.position);
+            float volume = Mathf.Clamp01(1 - (distance / 25f)); 
+            audioSource.volume = volume;  
+
             audioSource.PlayOneShot(tauntClip);
         }
     }
