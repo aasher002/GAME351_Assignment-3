@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18146001, g: 0.22709143, b: 0.3073942, a: 1}
+  m_IndirectSpecularColor: {r: 0.18145958, g: 0.22709076, b: 0.30739304, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1939,6 +1939,9 @@ MonoBehaviour:
   lightningBoltObject: {fileID: 167243617}
   startPoint: {fileID: 1034756024}
   endPoint: {fileID: 1389226508}
+  thunderClips:
+  - {fileID: 8300000, guid: 7daba4d3049436948bdd458cf7d3b7a2, type: 3}
+  - {fileID: 8300000, guid: 1c5a7e4aeec02824a847237e503b9db3, type: 3}
   minDelay: 5
   maxDelay: 15
   strikeRange: 15
@@ -30816,9 +30819,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5db64459cd7b31340ada3c2e8ca96f6c, type: 3}
   deathClip: {fileID: 8300000, guid: c9103ad186b025f4b8f2942cc93acb89, type: 3}
   tauntClips:
-  - {fileID: 8300000, guid: 2913ff5d8560b474792ed640f4e75c7e, type: 3}
-  - {fileID: 8300000, guid: ddce4dc69d48a21439ee6c3290f23be4, type: 3}
-  - {fileID: 8300000, guid: 7f50ee23bf4bfc544a0ba43da484d694, type: 3}
+  - {fileID: 8300000, guid: ce87c21302e2e684887e70ffb1d023ab, type: 3}
+  - {fileID: 8300000, guid: 0abda6df049ede34d9c472b9060aa92b, type: 3}
+  - {fileID: 8300000, guid: 0b314575ffce88c439c89341604b901a, type: 3}
 --- !u!136 &908960316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -33844,9 +33847,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f93e7534d6af39c44a39a829b12e953c, type: 3}
   deathClip: {fileID: 8300000, guid: d3f0364ce8ec69644a8786bc8a5ee202, type: 3}
   tauntClips:
-  - {fileID: 8300000, guid: 2356d12dd1e76a743b9559ae2727feab, type: 3}
-  - {fileID: 8300000, guid: 83dbfa26035a8f2479c7df3a45f80d58, type: 3}
-  - {fileID: 8300000, guid: d968e20290ea27a44a04aaa42f285cef, type: 3}
+  - {fileID: 8300000, guid: 67ddc0b4f0550b749a7c156bd2f0dc77, type: 3}
+  - {fileID: 8300000, guid: d19c45baad9eb944ab946789ddf504fd, type: 3}
+  - {fileID: 8300000, guid: 12088b8247286fb448dd62d66daef002, type: 3}
 --- !u!136 &995164642
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -53644,9 +53647,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d353562b4d32c6142856d66d218dd543, type: 3}
   deathClip: {fileID: 8300000, guid: 4052be6dfe9a1c141ab36a215eabd166, type: 3}
   tauntClips:
-  - {fileID: 8300000, guid: 09432d94b8e468c4f840ffda693e15fa, type: 3}
-  - {fileID: 8300000, guid: 003285644acf42d46af306acb58415c0, type: 3}
-  - {fileID: 8300000, guid: 51a80664c5e875746870cbac1a50769b, type: 3}
+  - {fileID: 8300000, guid: a95c26a8dbc44e7429dcd4b09781b80d, type: 3}
+  - {fileID: 8300000, guid: 9a8db7db8d60ba14583aa92655f9aef7, type: 3}
+  - {fileID: 8300000, guid: 69a7994725bf1ff4180aad31095b5c35, type: 3}
 --- !u!136 &1634644881
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -72556,9 +72559,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2579c93f84cd20648affdc9957b726ea, type: 3}
   deathClip: {fileID: 8300000, guid: ee50e1322ac406d4fb79c8f3edde2d19, type: 3}
   tauntClips:
-  - {fileID: 8300000, guid: 2e622795bf61bcc4aa43affeae131ace, type: 3}
-  - {fileID: 8300000, guid: 7ffba12c58ec01d44b9806ffe64d22ff, type: 3}
-  - {fileID: 8300000, guid: 624ad09fcb304a14496f5d6a24225b1b, type: 3}
+  - {fileID: 8300000, guid: fb3410350aa77d548b76a5b0ee6035d9, type: 3}
+  - {fileID: 8300000, guid: a80778cb627b41d43a436c9ac85704ab, type: 3}
+  - {fileID: 8300000, guid: 4bef7136c2759ad4e8869cf4aaee4108, type: 3}
 --- !u!136 &2033694764
 CapsuleCollider:
   m_ObjectHideFlags: 0
