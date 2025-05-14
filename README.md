@@ -32,5 +32,11 @@ A first-person Wild West action game built in Unity, featuring animations, physi
   - RainRate variable exposed in Inspector to control intensity.
 
 
-## Assets Used 
+## Assets Used
+- **Name**: Weapons Pack - Bullets
+- **Source**: https://assetstore.unity.com/packages/3d/props/weapons/weapons-pack-bullets-302702
+- **Name**: Particle Pack
+- **Source**: https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325
+- **Name**: Damage Sounds (Male) - NPC/Player Audio Pack
+- **Source**: https://assetstore.unity.com/packages/audio/sound-fx/voices/damage-sounds-male-npc-player-audio-pack-285385
 ## Known Issues
